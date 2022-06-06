@@ -10,7 +10,8 @@ def clearConsole():
     os.system(command)
 clearConsole()
 
-def main():
+def main(): 
+    #local variables, I probably should have used appendages but this is when I started to learn coding, list.append()
     grade = ["", "", "", "", "", "", "", "", "", ""]
     nums = [0, 0, 0, 0, 0,
     0, 0, 0, 0, 0,
@@ -20,12 +21,12 @@ def main():
     0, 0, 0, 0, 0]
     userScore = 0
     leaderboard = []
-    startPoints = [2, 12, 22]
-    endPoints = [10, 40, 70]
-    opp = [0, 0, 0, 0]
+    startPoints = [2, 12, 22] #Gives the starting points of the different skill levels for the numbers to be used
+    endPoints = [10, 40, 70] #Gives the ending points of the different skill levels for the numbers to be used
+    opp = [0, 0, 0, 0] #Opponents scores
 
     time.sleep(1)
-    print("Welcome to Math Competition vs Bots!")
+    print("Welcome to Math Competition vs Bots!") #Welcoming statement and inputs to be used.
     noresponse = input("Press Enter to continue... ")
     print("The objective of the game is to do multiplication math.\nWhile you attempt your math problems, you will be facing opponents.\nReady!")
     time.sleep(7)
@@ -36,6 +37,7 @@ def main():
     clearConsole()
     st = 0
     end = 0
+    # Grabbing the statement for skill level then using for loops to create the questions and answer banks into a list which will be used to determine if the user is correct.
     if (skillLevel.lower() == "a"):
         st  = startPoints[0]
         end = endPoints[0]
@@ -99,6 +101,7 @@ def main():
     for y in range (10):
         print(grade[y])
     print(leaderboard)
+    # Printing the leaderboard.
     print("Your Score Was: " + str(userScore))
     print("Time: " + str(totalTime))
 main()
